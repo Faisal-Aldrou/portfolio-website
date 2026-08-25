@@ -187,15 +187,19 @@ header {
   left: 0;
   width: 100%;
   z-index: 100;
-  padding: 2rem 0;
-  mix-blend-mode: difference;
+  padding: 1.25rem 0;
+  background-color: rgba(249, 246, 240, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  transition: padding 0.3s ease, background-color 0.3s ease;
 }
 
 .nav-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: var(--bg); /* Inverted since mix-blend-mode is difference */
+  color: var(--color);
 }
 
 .logo-link {
@@ -214,19 +218,7 @@ header {
   text-transform: uppercase;
   letter-spacing: 0.15em;
   font-weight: 500;
-}
-
-.nav-clock-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.clock-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background-color: var(--accent);
+  color: var(--muted);
 }
 
 .nav-links a {
